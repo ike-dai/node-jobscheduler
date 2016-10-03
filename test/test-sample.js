@@ -1,5 +1,5 @@
 var assert = require('assert');
-var jobscheduler = require('../lib/jobscheduler');
+var jobscheduler = require('../');
 
 
 describe('Job', function () {
