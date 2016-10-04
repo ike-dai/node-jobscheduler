@@ -12,4 +12,13 @@ describe('Job', function () {
 			});
 		});
 	});
+	describe('show history test: ' +  process.env.JSTESTJOB, function () {
+		it('成功時、jobのhistoryが返ってくること', function (done) {
+			client = new jobscheduler({url: process.env.JSTESTURL});
+			client.job.show_history({job: process.env.JSTESTJOB}, function(err, res, body){
+				assert.equal(res.statusCode, 200);
+				done();
+			});
+		});
+	});
 });
