@@ -9,7 +9,7 @@ describe('Job', function () {
 			client.job.start({job: process.env.JSTESTJOB}, function(err, res, result){
 				//console.log(result.spooler.answer.ok);
 				res.statusCode.should.equal(200);
-				result.spooler.answer.should.have.property('ok');
+				result.answer.should.have.property('ok');
 				done();
 			});
 		});
@@ -20,7 +20,7 @@ describe('Job', function () {
 			client.job.start({job: 'hogehoge'}, function(err, res, result){
 				//console.log(result.spooler.answer.ERROR);
 				res.statusCode.should.equal(200);
-				result.spooler.answer.should.have.property('ERROR');
+				result.answer.should.have.property('ERROR');
 				done();
 			});
 		});
@@ -31,7 +31,7 @@ describe('Job', function () {
 			client.job.show_history({job: process.env.JSTESTJOB}, function(err, res, result){
 				//console.log(result.spooler.answer.history['history.entry']);
 				res.statusCode.should.equal(200);
-				result.spooler.answer.history.should.have.property('history.entry');
+				result.answer.history.should.have.property('history.entry');
 				done();
 			});
 		});
