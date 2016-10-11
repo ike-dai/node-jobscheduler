@@ -1,6 +1,6 @@
 {
-  "name": "node-jobscheduler",
-  "version": "0.0.0",
+  "name": "jobscheduler",
+  "version": "0.0.1",
   "description": "JobScheduler API node.js libarary",
   "dependencies": {
     "request": "~2.75.0",

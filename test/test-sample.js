@@ -76,16 +76,16 @@ describe('Job', function () {
 			});
 		});
 	});
-	describe('wake job success test: ' +  process.env.JSTESTJOB, function () {
-		it('成功時、結果のxmlにokが返ってくること', function (done) {
-			client = new jobscheduler({url: process.env.JSTESTURL});
-			client.job.wake({job: process.env.JSTESTJOB}, function(err, res, result){
-				res.statusCode.should.equal(200);
-				result.answer.should.have.property('ok');
-				done();
-			});
-		});
-	});
+//	describe('wake job success test: ' +  process.env.JSTESTJOB, function () {
+//		it('成功時、結果のxmlにokが返ってくること', function (done) {
+//			client = new jobscheduler({url: process.env.JSTESTURL});
+//			client.job.wake({job: process.env.JSTESTJOB}, function(err, res, result){
+//				res.statusCode.should.equal(200);
+//				result.answer.should.have.property('ok');
+//				done();
+//			});
+//		});
+//	});
 });
 
 describe('JobChain', function () {
